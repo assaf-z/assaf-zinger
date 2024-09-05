@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Test</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Include Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include Bootstrap Icons CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="d-flex align-items-center bg-dark bg-gradient fixed-top" style="height: 56px; --bs-bg-opacity: .7">
+            <!-- Menu Icon -->
+            <div class="d-flex align-items-center justify-content-center bg-dark bg-gradient" style="width: 60px; height: 100%; --bs-bg-opacity: .4;" >
+                <button class="btn fs-3 text-light" style="width: 60px; height: 100%;">
+                    <i class="bi bi-grid-3x3-gap-fill"></i>
+                </button>
+            </div>
+            <!-- Title and Avatar -->
+            <div class="flex-grow-1 d-flex align-items-center justify-content-between px-3">
+                <span class="fs-5 text-light">My Application</span>
+                <div class="flex-shrink-0 dropdown">
+                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                    </a>
+                    <!--
+                    <ul class="dropdown-menu text-small shadow">
+                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                    -->
+                </div>
+            </div>
+        </header>
+
+        <div class="container-fluid bg-light" style="margin-top: 56px; height: calc(100vh - 56px); padding: 0;">
+            <div class="d-flex h-100">
+
+                <!-- Left Side Nav -->
+                <div class="d-flex flex-column flex-shrink-0 bg-white shadow-sm border-end border-light-subtle" style="width: 61px;">
+                    <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                                <i class="bi bi-house-door fs-5 text-body"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                                <i class="bi bi-person fs-5 text-body"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                                <i class="bi bi-gear fs-5 text-body"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                                <i class="bi bi-lock fs-5 text-body"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Body Continer -->
+                <div class="d-flex flex-grow-1 gap-3 p-3">
+                    <div class="flex-grow-1 gap-3 d-flex flex-column" style="overflow-y: auto;">
+                        <div class="d-flex flex-grow-1 bg-light-subtle rounded-2" style="height: 60px;"></div>
+                        <div class="d-flex flex-grow-1 bg-light-subtle rounded-2" style="height: 100%;"></div>
+                    </div>
+                    <!-- Right Panel -->                    
+                    <div class="bg-white flex-shrink-0 rounded-2 shadow-sm border border-light-subtle d-flex flex-column" style="width: 40%; height: 100%; overflow: hidden;">
+                        <div class="flex-grow-1 d-flex">
+                            <div class="d-flex flex-grow-1 flex-column bg-white" style="overflow: hidden;">
+                                <!-- Header -->
+                                <div class="container-fluid p-0 flex-shrink-0">
+                                    <div class="d-flex align-items-center border border-light-subtle bg-light ps-2 pe-3" style="height: 46px;">
+                                        <div class="me-auto fw-medium text-secondary-emphasis">Copilot</div>
+                                        <div class="text-body">
+                                            <i class="bi bi-gear"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Chat Container -->
+                                <div class="d-flex flex-grow-1 overflow-auto" style="overflow-y: auto;">
+                                    <div>Content</div>
+                                </div>
+                                <!-- Prompt Input -->
+                                <div class="container-fluid p-0 flex-shrink-0 border-top border-light-subtle bg-white" style="height: 62px;"></div>
+                            </div>
+                            <!-- Right Side Nav -->
+
+                            <div class="d-flex flex-column flex-shrink-0 bg-white shadow-sm border-start border-light-subtle" style="width: 69px;">
+                                <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link active py-3 rounded-0" aria-current="page" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Home" data-bs-original-title="Home">
+                                            <i class="bi bi-stars fs-5"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Dashboard" data-bs-original-title="Dashboard">
+                                            <i class="bi bi-person fs-5 text-body"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link py-3 rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Orders" data-bs-original-title="Orders">
+                                            <i class="bi bi-gear fs-5 text-body"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="nav-link py-3 border-bottom rounded-0" data-bs-toggle="tooltip" data-bs-placement="right" aria-label="Products" data-bs-original-title="Products">
+                                            <i class="bi bi-lock fs-5 text-body"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Include Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
