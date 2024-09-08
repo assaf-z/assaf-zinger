@@ -69,42 +69,334 @@
 
                 <!-- Body Continer -->
                 <div class="d-flex flex-grow-1 gap-3 p-3">
-                    <div class="flex-grow-1 gap-3 d-flex flex-column" style="overflow-y: auto;">
-                        <div class="d-flex flex-grow-1 bg-light-subtle rounded-2" style="height: 60px;"></div>
-                        <div class="d-flex flex-grow-1 bg-light-subtle rounded-2" style="height: 100%;"></div>
+                    <div class="flex-grow-1 gap-2 d-flex flex-column overflow-y-scroll">
+                        <!-- Top Bar -->
+                        <div class="d-flex flex-grow-1 bg-white rounded-2 justify-content-between align-items-center px-2 border border-light-subtle" style="height: 60px;">
+                            <div class="row g-3 flex-grow-1">
+                                <div class="col">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search by name, number, ID, text, or skill">
+                                        <span class="input-group-text" id="inputGroup-sizing-default"><i class="bi bi-search"></i></span>
+                                      </div>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-outline-dark">
+                                        <i class="bi bi-funnel"></i>
+                                        <span class="ms-1">Filter (1)</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="pe-1 flex-shrink-0">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Foucused view</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Body Content -->
+                        <div class="d-flex flex-grow-1 flex-column bg-white rounded-2 border border-light-subtle" style="height: 100%;">
+                            <!-- Tabs & Filter -->
+                            <div class="container-fluid justify-content-between rounded-top-2 align-items-center ps-0 pe-2 border-bottom border-light-subtle pt-2 bg-light-subtle">
+                                <div class="row gap-3 justify-content-between align-items-end">
+                                    <div class="col-7">
+                                        <ul class="nav nav-underline nav-fill">
+                                            <li class="nav-item">
+                                                <a class="nav-link active text-uppercase" aria-current="page" href="#">Skills</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body-secondary fw-medium text-uppercase" href="#">Agent</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-body-secondary fw-medium text-uppercase" href="#">Contacts</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col flex-shrink-0 ms-3" style="max-width: 186px;">
+                                        <div class="pe-1 pb-2">
+                                            <select class="form-select" aria-label="Default select example">
+                                                <option selected>SLA</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Show Metrics-->
+                            <div class="d-flex align-items-end flex-column border-bottom border-light-subtle pe-2 py-1 text-muted bg-light-subtle">
+                                <a href="#" class="btn btn-sm">
+                                    Show Metrics
+                                    <i class="bi bi-caret-down-fill ms-1"></i>
+                                </a>
+                            </div>
+                            <!-- Table -->
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr class="table-light" style="font-size: 14px;">
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">Skill (138)</th>
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">Wait Time</th>
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">SLA <i class="bi bi-arrow-down"></i></th>
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">Contacts in Queue</th>
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">Logged in Agents</th>
+                                        <th scope="col" style="color: var(--bs-secondary-color); text-transform: uppercase;">Campaign</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     <!-- Right Panel -->                    
-                    <div class="bg-white flex-shrink-0 rounded-2 shadow-sm border border-light-subtle d-flex flex-column" style="width: 40%; height: 100%; overflow: hidden;">
+                    <div class="bg-white flex-shrink-0 rounded-2 shadow-sm border border-light-subtle d-flex flex-column overflow-hidden" style="width: 40%; height: 100%;">
                         <div class="flex-grow-1 d-flex">
                             <div class="d-flex flex-grow-1 flex-column bg-white" style="overflow: hidden;">
                                 <!-- Header -->
                                 <div class="container-fluid p-0 flex-shrink-0">
-                                    <div class="d-flex align-items-center border border-light-subtle bg-light ps-2 pe-3" style="height: 46px;">
-                                        <div class="me-auto fw-medium text-secondary-emphasis">Copilot</div>
+                                    <div class="d-flex align-items-center border-bottom border-light-subtle bg-light ps-2 pe-3" style="height: 46px;">
+                                        <div class="me-auto fw-bold" style="font-size: 14px; color: var(--bs-secondary-color);">Copilot</div>
                                         <div class="text-body">
                                             <i class="bi bi-gear"></i>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Chat Container -->
-                                <div class="d-flex flex-grow-1 overflow-auto" style="overflow-y: auto;">
-                                    <div>Content</div>
+                                <div class="d-flex flex-grow-1 overflow-y-scroll" style="height: 100px;">
+                                    <div class="d-flex flex-grow-1 flex-column gap-3 p-3">
+                                        <!-- Card 1 -->
+                                        <div class="d-flex align-items-end flex-column">
+                                            <div class="card" style="max-width: 70%;">
+                                                <div class="card-body pb-2">
+                                                    <p class="card-text">What are the top 10 call reasons?</p>
+                                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                                        <div class="d-flex align-items-center gap-0">
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-pencil"></i>
+                                                            </a>
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                        </div>
+                                                        <span class="ms-auto text-muted" style="font-size: 14px;">11:42</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 2 -->
+                                        <div class="d-flex flex-column">
+                                            <div class="card w-100 bg-light">
+                                                <div class="card-body pt-3">
+                                                    <div class="mb-2">
+                                                        <i class="bi bi-stars text-primary fs-5"></i>
+                                                    </div>
+                                                    <p class="card-text mb-3">Here are the top 10 most frequent call reasons recorded for the last 7 days:</p>
+                                                    <ul class="list-group-numbered ps-3">
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="card-text mb-3">These top 10 reasons of what customers call the most are covering 86% of all reasons.</p>
+                                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                                        <div class="d-flex align-items-center gap-0">
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-copy"></i>
+                                                            </a>
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-arrow-clockwise"></i>
+                                                            </a>
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-hand-thumbs-up"></i>
+                                                            </a>
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-hand-thumbs-down"></i>
+                                                            </a>
+                                                            <a href="#" class="btn btn-sm">
+                                                                <i class="bi bi-three-dots-vertical"></i>
+                                                            </a>
+                                                        </div>
+                                                        <span class="ms-auto text-muted" style="font-size: 14px;">11:42</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 3 -->
+                                        <div class="d-flex flex-column">
+                                            <div class="card w-100">
+                                                <div class="card-body pt-3">
+                                                    <div class="mb-2">
+                                                        <i class="bi bi-stars text-primary fs-5"></i>
+                                                    </div>
+                                                    <p class="card-text mb-3">Here are the top 10 most frequent call reasons recorded for the last 7 days:</p>
+                                                    <ul class="list-group-numbered ps-3">
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="card-text mb-3">These top 10 reasons of what customers call the most are covering 86% of all reasons.</p>
+                                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                                        <div class="d-flex align-items-center gap-0" style="height: 32px;">
+                                                        </div>
+                                                        <span class="ms-auto text-muted" style="font-size: 14px;">11:42</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Card 3 -->
+                                        <div class="d-flex flex-column pb-3">
+                                            <div class="card w-100">
+                                                <div class="card-body pt-3">
+                                                    <div class="mb-2">
+                                                        <i class="bi bi-stars text-primary fs-5"></i>
+                                                    </div>
+                                                    <p class="card-text mb-3">Here are the top 10 most frequent call reasons recorded for the last 7 days:</p>
+                                                    <ul class="list-group-numbered ps-3">
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                        <li class="list-group-item d-flex align-items-start mb-2">
+                                                            <div class="ms-2">
+                                                                <span class="fw-bold">Tel Aviv Beaches:</span>
+                                                                <span class="ms-1"> 1,189 calls.</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                    <p class="card-text mb-3">These top 10 reasons of what customers call the most are covering 86% of all reasons.</p>
+                                                    <div class="d-flex flex-row gap-3 align-items-center">
+                                                        <div class="d-flex align-items-center gap-0" style="height: 32px;">
+                                                        </div>
+                                                        <span class="ms-auto text-muted" style="font-size: 14px;">11:42</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <!-- Prompt Input -->
-                                <div class="container-fluid p-0 flex-shrink-0 border-top border-light-subtle bg-white">
-                                    <div class="d-flex align-items-center ps-2 pe-3 gap-2" style="height: 62px;">
+                                <div class="container-fluid p-0 flex-shrink-0 border-top border-light-subtle bg-white ">
+                                    <div class="d-flex align-items-center px-2 gap-2" style="height: 62px;">
                                         <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="Ask a question or request..."">
-                                            <button class="btn btn-outline-secondary" type="button">
-                                                <i class="bi bi-stars"></i>
-                                            </button>   
+                                            <input type="text" class="form-control" placeholder="Ask a question or request...">
+                                            <span class="input-group-text bg-white" id="basic-addon2" style="height: 38px; width: 38px; padding: 0;">
+                                                <div class="flex-shrink-0 dropdown ps-2">
+                                                    <a href="#" class="d-block text-decoration-none" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-stars"></i>
+                                                    </a>
+                                                    
+                                                    <ul class="dropdown-menu text-small shadow">
+                                                        <li><a class="dropdown-item" href="#">New project...</a></li>
+                                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                                        <li><hr class="dropdown-divider"></li>
+                                                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                                    </ul>
+                                                
+                                                </div>
+                                            
+                                        </span>   
                                         </div>
                                         <button class="btn btn-primary" type="button"><i class="bi bi-send-fill"></i></button>
                                     </div>
                                 </div>
                             </div>
-                            <!-- Right Side Nav -->
 
+                            <!-- Right Side Nav -->
                             <div class="d-flex flex-column flex-shrink-0 bg-white shadow-sm border-start border-light-subtle" style="width: 69px;">
                                 <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                                     <li class="nav-item">
